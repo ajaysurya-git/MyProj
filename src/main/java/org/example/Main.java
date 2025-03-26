@@ -24,6 +24,16 @@ public class Main {
         sll.display();
         sll.insert(22,3);
         sll.display();
+        sll.deleteFirst();
+        sll.display();
+        sll.deleteLast();
+        sll.display();
+        sll.deleteAfter(5);
+        sll.display();
+        sll.deleteBefore(12);
+        sll.display();
+        sll.delete(8);
+        sll.display();
         System.out.println("Size : "+sll.size);
 
         LinkedList<Integer> list = new LinkedList<>();
@@ -32,8 +42,8 @@ public class Main {
 //        list.addFirst(7);
 //        list.addLast(10);
 //        list.addFirst(3);
-//    list.add(8, 12);
-        System.out.println(list);
-        System.out.println(list.size());
+//        list.add(8, 12);
+        //System.out.println(list);
+        //System.out.println(list.size());
     }
 }

@@ -79,6 +79,87 @@ public class SLL {
         System.out.println("->");
     }
 
+    public void deleteFirst() {
+        if(head == null) {
+            System.out.println("List is Empty");
+        }
+        else {
+            head = head.next;
+            size --;
+        }
+    }
+
+    public void deleteLast() {
+        if(head == null) {
+            System.out.println("List is Empty");
+        }
+        else {
+            Node temp = head;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+            tail = temp;
+            size--;
+        }
+    }
+
+    public void deleteAfter(int afterData){
+        Node temp = head;
+        while(temp.data != afterData){
+            temp = temp.next;
+        }
+        if(temp.next ==null){
+            deleteFirst();
+        }
+        else if(temp.next.next == null){
+            deleteLast();
+        }
+        else {
+            temp.next = temp.next.next;
+            tail = temp;
+            size--;
+        }
+    }
+
+    public void deleteBefore(int beforeData){
+        Node temp = head;
+        while(temp.next.next.data != beforeData){
+            temp = temp.next;
+        }
+        if(temp.next == null){
+            deleteFirst();
+        }
+        else if(temp.next.next == null){
+            deleteLast();
+        }
+        else {
+            temp.next = temp.next.next;
+            tail = temp;
+            size--;
+        }
+    }
+
+    public void delete(int position){
+        if(position == 0){
+            deleteFirst();
+        }
+        else if(position == size){
+            deleteLast();
+        }
+        else if(1<=position && position<=(size-1)){
+            Node temp = head;
+            for(int i=0; i<position;i++){
+                temp=temp.next;
+            }
+            deleteBefore(temp.data);
+            size--;
+        }
+        else {
+            System.out.println("Enter a valid position");
+        }
+    }
+
 
 
 
