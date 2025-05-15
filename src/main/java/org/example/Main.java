@@ -46,16 +46,47 @@ public class Main {
         //System.out.println(list);
         //System.out.println(list.size());
 
-        DLL dll = new DLL();
-        dll.insertFirst(8);
-        dll.display();
-        dll.insertFirst(6);
-        dll.display();
-        dll.insertFirst(5);
-        dll.display();
-        dll.insertFirst(2);
-        dll.display();
-        dll.insertLast(12);
-        dll.display();
+//        DLL dll = new DLL();
+//        dll.insertFirst(8);
+//        dll.display();
+//        dll.insertFirst(6);
+//        dll.display();
+//        dll.insertFirst(5);
+//        dll.display();
+//        dll.insertFirst(2);
+//        dll.display();
+//        dll.insertLast(12);
+//        dll.display();
+
+//        Stack dll = new Stack();
+//        dll.push(8);
+//        dll.display();
+//        dll.push(6);
+//        dll.display();
+//        dll.push(5);
+//        dll.display();
+//        dll.push(2);
+//        dll.display();
+
+        Queue queue = new Queue();
+        queue.enQueue(2);
+        queue.display();
+        queue.enQueue(3);
+        queue.display();
+        queue.enQueue(4);
+        queue.display();
+        queue.enQueue(5);
+        queue.display();
+        queue.reverseDisplay();
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
     }
 }
